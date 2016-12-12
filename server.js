@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 
 var players = require('./routes/player.js');
-
+var clubs = require('./routes/club');
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(player);
 
+
+app.use(clubs);
 
 app.use(function(req, res) {
     res.status(404);
