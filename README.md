@@ -1,6 +1,6 @@
 ##Players API
 
-1. #Create Player. Url: soccerapi.herokuapp.com/api/players
+#1. Create Player. Url: soccerapi.herokuapp.com/api/players
 example: 
 ```javascript
 {
