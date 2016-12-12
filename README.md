@@ -15,7 +15,7 @@ Example:
   "position" : "LM"
 }
 ```
-#2. Update player. 
+##2. Update player. 
 
 Method: PUT
 
@@ -29,33 +29,33 @@ Example:
 ```
 Changes a players position to "RM"
 
-#3. Delete player. 
+##3. Delete player. 
 
 Method: DELETE
 
 URL: soccerapi.herokuapp.com/api/players/:id
 
-#4. Get all players. 
+##4. Get all players. 
 
 Method: GET
 
 URL: [soccerapi.herokuapp.com/api/players](http://soccerapi.herokuapp.com/api/players)
 
-#5. Get single player. 
+##5. Get single player. 
 
 Method: GET
 
 URL: [soccerapi.herokuapp.com/api/players/:id](http://soccerapi.herokuapp.com/api/players/584e7f16fe1e2300049c9463)
 
-#6. Get all players in specific team. 
+##6. Get all players in specific team. 
 
 Method: GET
 
 URL: [soccerapi.herokuapp.com/api/players/clubs/:id](http://soccerapi.herokuapp.com/api/players/clubs/584e7e5cfe1e2300049c9461)
 
-##Clubs API
+#Clubs API
 
-#1. Create Club. 
+##1. Create Club. 
 
 Method: POST
 
@@ -68,7 +68,7 @@ Example:
   "image" : "someimageurl.jpg",
 }
 ```
-#2. Update Clubs. 
+##2. Update Clubs. 
 
 Method: PUT
 
@@ -82,19 +82,19 @@ Example:
 ```
 Changes a clubs name to "Real Madrid C.F."
 
-#3. Delete club. 
+##3. Delete club. 
 
 Method: DELETE
 
 URL: soccerapi.herokuapp.com/api/clubs/:id
 
-#4. Get all clubs. 
+##4. Get all clubs. 
 
 Method: GET
 
 URL: [soccerapi.herokuapp.com/api/clubs](http://soccerapi.herokuapp.com/api/clubs)
 
-#5. Get single club. 
+##5. Get single club. 
 
 Method: GET
 
