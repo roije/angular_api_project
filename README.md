@@ -1,7 +1,7 @@
 ##Players API
 
 #1. Create player. 
-URL: soccerapi.herokuapp.com/api/players
+URL: [soccerapi.herokuapp.com/api/players](http://soccerapi.herokuapp.com/api/players)
 
 Example: 
 ```javascript
@@ -13,7 +13,7 @@ Example:
 }
 ```
 #2. Update player. 
-URL: soccerapi.herokuapp.com/api/players/:id
+URL: http://soccerapi.herokuapp.com/api/players/:id
 
 Example:
 ```javascript
@@ -24,13 +24,13 @@ Example:
 Changes a players position to "RM"
 
 #3. Delete player. 
-URL: soccerapi.herokuapp.com/api/players/:id
+URL: http://soccerapi.herokuapp.com/api/players/:id
 
 #4. Get all players. 
-URL: soccerapi.herokuapp.com/api/players/
+URL: [soccerapi.herokuapp.com/api/players](http://soccerapi.herokuapp.com/api/players)
 
 #5. Get single player. 
-URL: soccerapi.herokuapp.com/api/players/:id
+URL: [soccerapi.herokuapp.com/api/players/:id](http://soccerapi.herokuapp.com/api/players/584e7f16fe1e2300049c9463)
 
 #6. Get all players in specific team. 
 URL: soccerapi.herokuapp.com/api/players/clubs/:id
