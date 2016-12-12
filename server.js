@@ -11,8 +11,6 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 app.use(players);
-
-
 app.use(clubs);
 
 app.use(function(req, res) {

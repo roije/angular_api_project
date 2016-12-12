@@ -3,15 +3,14 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 var url = require('../config/config.js').mongodb;
+var players = require('../config/config.js').players;
 
 //get all players
 app.get('/api/players', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
-    	var collection = db.collection('players');
-
-    	collection.find({}).toArray(function(err, data) {
+    	db.collection(players).find({}).toArray(function(err, data) {
 
         	res.send(data);
         	db.close();
@@ -24,9 +23,7 @@ app.get('/api/players/:id', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
-        var collection = db.collection('players');
-
-        collection.findOne({'_id' : ObjectId(req.params.id)}, function(err, data) {
+        db.collection(players).findOne({'_id' : ObjectId(req.params.id)}, function(err, data) {
             
             res.send(data);
             db.close();
@@ -39,11 +36,9 @@ app.delete('/api/players/:id', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
-        var collection = db.collection('players');
+        db.collection(players).remove(req.body, function(err, data) {
 
-        collection.remove(req.body, function(err, data) {
-
-            res.send({ 'msg': 'user deleted' });
+            res.send({ 'msg': 'Player deleted' });
             db.close();
         });
     });
@@ -53,11 +48,10 @@ app.delete('/api/players/:id', function(req, res) {
 app.post('/api/players', function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
-        var collection = db.collection('players');
 
-        collection.insert(req.body, function(err, data) {
+        db.collection(players).insert(req.body, function(err, data) {
             
-            res.send({"msg" : "user created"});
+            res.send({"msg" : "Player created"});
             db.close();
         });
     });
@@ -68,11 +62,20 @@ app.put('/api/players/:id', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
-        var collection = db.collection('players');
-
-        collection.update({'_id' : ObjectId(req.params.id)}, {$set: req.body}, function(err, data) {
+        db.collection(players).update({'_id' : ObjectId(req.params.id)}, {$set: req.body}, function(err, data) {
             
-            res.send({"msg" : "user updated"});
+            res.send({"msg" : "Player updated"});
+            db.close();
+        });
+    });
+});
+
+//Get all players with same club
+app.get('/api/players/clubs/:id', function(req, res) {
+    MongoClient.connect(url, function(err, db) {
+
+        db.collection(players).find({'clubId' : req.params.id}).toArray(function(err, data) {
+            res.send(data);
             db.close();
         });
     });

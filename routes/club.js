@@ -14,7 +14,7 @@ app.post('/api/clubs', function(req, res){
    MongoClient.connect(url, function(err, db) {
 
        db.collection(clubs).insertOne(req.body, function(err, data) {
-           res.json({"msg" : "product created"});
+           res.json({"msg" : "Club created"});
            db.close();
        })
 
