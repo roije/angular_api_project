@@ -79,10 +79,7 @@ app.put('/api/players/:id', function(req, res) {
 });
 
 
-
-
-
-
+module.exports = app;
 
 
 

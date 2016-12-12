@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-var players = require('./routes/player.js');
+var players = require('./routes/player');
 var clubs = require('./routes/club');
 
 app.use(bodyParser.urlencoded({
@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-app.use(player);
+app.use(players);
 
 
 app.use(clubs);
