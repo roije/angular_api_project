@@ -50,7 +50,7 @@ app.delete('/api/players/:id', function(req, res) {
 });
 
 // post creates a new player
-app.post('/api/player', function(req, res) {
+app.post('/api/players', function(req, res) {
     MongoClient.connect(url, function(err, db) {
 
         var collection = db.collection('players');
