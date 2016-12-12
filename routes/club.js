@@ -55,6 +55,7 @@ app.delete('/api/clubs/:id', function(req, res) {
     })
 });
 
+//Update a club
 app.put('/api/clubs/:id', function(req, res) {
     MongoClient.connect(url, function (err, db) {
         db.collection(clubs).updateOne({ '_id' : ObjectId(req.params.id)}, {$set : req.body}, function(err, data) {
