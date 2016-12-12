@@ -2,11 +2,15 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
+var clubs = require('./routes/club');
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
 app.use(bodyParser.json());
+
+app.use(clubs);
 
 app.use(function(req, res) {
     res.status(404);
