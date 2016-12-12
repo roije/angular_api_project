@@ -2,6 +2,7 @@
 
 #1. Create player. 
 URL: soccerapi.herokuapp.com/api/players
+
 Example: 
 ```javascript
 {
@@ -13,6 +14,7 @@ Example:
 ```
 #2. Update player. 
 URL: soccerapi.herokuapp.com/api/players/:id
+
 Example:
 ```javascript
 {
@@ -37,6 +39,7 @@ URL: soccerapi.herokuapp.com/api/players/clubs/:id
 
 #1. Create Club. 
 URL: soccerapi.herokuapp.com/api/clubs
+
 Example: 
 ```javascript
 {
@@ -46,6 +49,7 @@ Example:
 ```
 #2. Update Clubs. 
 URL: soccerapi.herokuapp.com/api/clubs/:id
+
 Example:
 ```javascript
 {
