@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var players = require('./routes/player');
 var clubs = require('./routes/club');
 
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));

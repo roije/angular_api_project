@@ -36,7 +36,7 @@ app.delete('/api/players/:id', function(req, res) {
 
     MongoClient.connect(url, function(err, db) {
 
-        db.collection(players).remove(req.body, function(err, data) {
+        db.collection(players).remove({'_id' : ObjectId(req.params.id)}, function(err, data) {
 
             res.send({ 'msg': 'Player deleted' });
             db.close();
@@ -47,7 +47,6 @@ app.delete('/api/players/:id', function(req, res) {
 // post creates a new player
 app.post('/api/players', function(req, res) {
     MongoClient.connect(url, function(err, db) {
-
 
         db.collection(players).insert(req.body, function(err, data) {
             
